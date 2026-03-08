@@ -10,13 +10,16 @@ cat ~/.ssh/id_ed25519.pub
 ssh -T git@github.com
 
 git clone 
+
 git pull (拉取远端最新代码)
 git branch
 git checkout -b (切换到自己的分支push)
+
 git add 
 git commit
 git push
 
+错误处理：
 git status
 git remote -v (查看远程仓库地址)
 
