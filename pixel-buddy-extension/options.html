@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelBuddy Settings</title>
+    <!-- Reusing the style from popup for consistency -->
+    <link rel="stylesheet" href="popup/style.css">
+    <style>
+        body {
+            width: 600px;
+            margin: 0 auto;
+            color: white;
+        }
+
+        /* Override popup specific width */
+        .container {
+            padding: 2rem;
+        }
+
+        .list-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #374151;
+            padding: 0.5rem 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 0.25rem;
+        }
+
+        .delete-btn {
+            color: #ef4444;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body class="bg-gray-900 font-sans">
+    <div class="container">
+        <h1 class="text-xl font-bold mb-4">PixelBuddy Settings</h1>
+
+        <div class="mb-6">
+            <h2 class="text-lg font-bold mb-2">Blacklisted Sites</h2>
+            <p class="text-sm text-gray-400 mb-4">Sites that will damage your pet during focus sessions.</p>
+
+            <div class="flex space-x-2 mb-4">
+                <input type="text" id="new-site-input" placeholder="example.com"
+                    class="flex-1 bg-gray-800 border border-gray-600 rounded px-2 py-2 text-white">
+                <button id="add-btn"
+                    class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded transition">Add</button>
+            </div>
+
+            <div id="blacklist-container">
+                <!-- Items will be injected here -->
+            </div>
+        </div>
+
+        <div class="mb-6">
+            <h2 class="text-lg font-bold mb-2">Focus Settings</h2>
+            <div class="flex items-center space-x-2">
+                <label for="duration" class="text-sm">Duration (minutes):</label>
+                <input type="number" id="duration-input" value="25" min="1" max="60"
+                    class="bg-gray-800 border border-gray-600 rounded px-2 py-1 w-20 text-white" disabled
+                    title="Coming soon">
+            </div>
+        </div>
+
+        <button id="save-btn"
+            class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded transition w-full">Save
+            Settings</button>
+    </div>
+
+    <script src="options.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelBuddy</title>
+    <!-- Simple styles for MVP, replacing full Tailwind build for now -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-900 text-white w-80 p-4 font-sans">
+
+    <!-- Header / Status -->
+    <div class="flex justify-between items-center mb-4">
+        <h1 class="text-xl font-bold">PixelBuddy</h1>
+        <div class="text-sm bg-gray-700 px-2 py-1 rounded">Lv. <span id="level">1</span></div>
+    </div>
+
+    <!-- Pet Display Area -->
+    <div
+        class="bg-gray-800 rounded-lg p-6 mb-4 flex justify-center items-center h-32 border-2 border-dashed border-gray-600">
+        <div id="pet-sprite" class="text-4xl">👾</div>
+    </div>
+
+    <!-- Health & XP Bars -->
+    <div class="mb-6 space-y-2">
+        <!-- Health Bar -->
+        <div class="flex items-center text-xs">
+            <span class="w-8">HP</span>
+            <div class="flex-1 bg-gray-700 h-3 rounded overflow-hidden">
+                <div id="hp-bar" class="bg-red-500 h-full w-full transition-all duration-300"></div>
+            </div>
+            <span class="ml-2 w-8 text-right" id="hp-text">100%</span>
+        </div>
+        <!-- XP Bar -->
+        <div class="flex items-center text-xs">
+            <span class="w-8">XP</span>
+            <div class="flex-1 bg-gray-700 h-3 rounded overflow-hidden">
+                <div id="xp-bar" class="bg-blue-500 h-full w-0 transition-all duration-300"></div>
+            </div>
+            <span class="ml-2 w-8 text-right" id="xp-text">0%</span>
+        </div>
+    </div>
+
+    <!-- Timer Control -->
+    <div class="text-center">
+        <div class="text-5xl font-mono mb-4" id="timer-display">25:00</div>
+
+        <div class="flex justify-center space-x-2">
+            <button id="start-btn"
+                class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-6 rounded transition">
+                Start Focus
+            </button>
+            <button id="reset-btn"
+                class="bg-gray-600 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded transition hidden">
+                Reset
+            </button>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
