@@ -1,0 +1,4 @@
+Checks: '-*,clang-analyzer-core.UndefinedBinaryOperatorResult,cppcoreguidelines-init-variables,modernize-use-nullptr'
+WarningsAsErrors: '*'
+HeaderFilterRegex: ''
+FormatStyle:     none
