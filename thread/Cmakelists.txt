@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.10)
+project(mutex_example)
+
+set(CMAKE_CXX_STANDARD 11)
+
+add_executable(mutex_example mutex.cpp)
+
+if(UNIX)
+    target_link_libraries(mutex_example pthread)
+endif()
